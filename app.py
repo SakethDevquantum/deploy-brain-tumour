@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 
 
-API_URL = "http://localhost:8000/predict/"
+API_URL = "https://your-fastapi-app.onrender.com/predict/"
 
 st.title("Brain Tumor Classification using ViT")
 st.write("Upload a brain MRI image (grayscale) to predict the tumor class.")
