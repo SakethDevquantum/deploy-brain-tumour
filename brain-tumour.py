@@ -19,8 +19,8 @@ transform=transforms.Compose([
     transforms.Normalize(mean=0.5, std=0.5)
 ])
 
-train_data=datasets.ImageFolder(root='D:\\SAKETH\Pytorch\\brain_tumour\\BrainTumor_1\\Train', transform=transform)
-test_data=datasets.ImageFolder(root='D:\\SAKETH\Pytorch\\brain_tumour\\BrainTumor_1\\Test', transform=transform)
+train_data=datasets.ImageFolder(root='', transform=transform)# root files for training and testing dataset
+test_data=datasets.ImageFolder(root='', transform=transform)
 
 device="cuda" if torch.cuda.is_available() else "cpu"
 num_classes=len(train_data.classes)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         }, saving_path)
 
     print("Training done, time for testing")
-    img_path="D:\\SAKETH\\Pytorch\\brain_tumour\\BrainTumor_1\\Test\\glioma\\Te-gl_0168.jpg"
+    img_path=""#image path for testing a singular image
     transformen=transforms.Compose([
         transforms.Resize((128,128)),
         transforms.Grayscale(num_output_channels=1),
